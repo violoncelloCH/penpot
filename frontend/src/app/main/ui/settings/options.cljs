@@ -68,6 +68,33 @@
                      :name :theme
                      :default "default"
                      :options [{:label "Default" :value "default"}]}]]
+     ;; --- Feedback section
+     [:h2 "Email"]
+     [:p "Please describe the reason of your email, specifying if is an issue, an idea or a doubt. A member of our team will respond as soon as possible."]
+     [:div.fields-row
+      [:div.custom-input
+       [:label "Subject"]
+       [:input {:type "text" :name "Subject" :label "Subject"}]]]
+     [:div.fields-row
+      [:div.custom-input
+       [:label "Description"]
+       [:textarea {:type "text" :name "Subject" :label "Description" :rows "5"}]]]
+     [:input.btn-primary.btn-large {:name "submit" :type "submit" :value "Send"}]
+
+     [:hr]
+
+     [:h2 "Team discussions"]
+     [:p "Join Penpot team collaborative communication forum."]
+     [:p "You can ask and answer questions, have open-ended conversations, and follow along on decisions affecting the project."]
+     [:a.btn-secondary.btn-large {:href "https://github.com/penpot/penpot/discussions" :target "_blank"} "Go to discussions"]
+
+     [:hr]
+
+     [:h2 "Gitter"]
+     [:p "Feeling like talking? Chat with us at Gitter"]
+     [:a.btn-secondary.btn-large {:href "#" :target "_blank"} "Start a chat"]
+     ;; --- Feedback section
+     
      [:& fm/submit-button
       {:label (t locale "dashboard.update-settings")}]]))
 
